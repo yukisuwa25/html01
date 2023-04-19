@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./slick/slick.css">
+    <link rel="stylesheet" href="./slick/slick-theme.css">
+    <link rel="stylesheet" href="./CSShake/CSShake.css">
+    <link rel="stylesheet" href="./CaptionHoverEffects-master/css/default.css">
+    <link rel="stylesheet" href="./CaptionHoverEffects-master/css/component.css">
+    <link rel="stylesheet" href="./dist/zmd.hierarchical-display.css">
+    <link rel="stylesheet" href="./dist/zmd.hierarchical-display.min.css">
+    <link rel="stylesheet" href="./css/test1.css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./slick/slick.min.js"></script>
+    <script src="./dist/jquery.zmd.hierarchical-display.min.js"></script>
+    <script src="./CaptionHoverEffects-master/js/modernizr.custom.js"></script>
+    <script src="./CaptionHoverEffects-master/js/toucheffects.js"></script>
+
+    <title>チーズモンスター</title>
+</head>
+<body>
+    <header>
+        <section>
+            <div class="header-pad">
+                <h1 class="header-pra">Cheese Monster</h1>
+            </div>
+        </section>
+
+        <section class="header-wrap">
+            <div class="card">
+              <div class="card-image">
+                <h1 class="card-text">登場キャラクター</h1>
+              </div>
+            </div>
+          </section>
+    </header>
+    <main>
+        <section>
+            <h2></h2>
+        </section>
+        <section>
+            <div class="container">
+                <div class="item box-item1">
+                    <ul>
+                        <li><img class="pic-box1" src="./img/pic1.jpg" alt="hoge"></li>
+                    </ul>
+                </div>
+                <div class="item box-item2">
+                    <ul>
+                        <li><img class="pic-box1" src="./img/pic2.jpg" alt="hoge"></li>
+                    </ul>
+                </div>
+                <div class="item box-item3">
+                    <ul>
+                        <li><img class="pic-box1" src="./img/pic3.jpeg" alt="hoge"></li>
+                    </ul>
+                </div>
+                <div class="item box-item4">
+                    <ul>
+                        <li><img class="pic-box1" src="./img/pic4.jpeg" alt="hoge"></li>
+                    </ul>
+                </div>
+                <div class="item box-item5">
+                    <ul>
+                        <li><img class="pic-box1" src="./img/pic5.jpeg" alt="hoge"></li>
+                    </ul>
+                </div>
+                <div class="item box-item6">
+                    <ul>
+                        <li><img class="pic-box1" src="./img/pic6.jpeg" alt="hoge"></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="geme-wraper">
+            <div class="game-bota">
+                <p href="#" id="omikuzi" class="btn">スタート</p>
+            </div>
+            <div class="game-pad">
+                    <p id="echo"></p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-pad">
+        <div class="footer">
+            <p class="footer-pra footer-ani">ありがとうございました</p>
+        </div>
+    </footer>
+        <!-- ここからjs -->
+    <script>
+        $("#omikuzi").on("click",function(){
+            //乱数を作る
+            const r = Math.ceil( Math.random()*6 );
+            //分岐
+            let view = "";
+            if(r==1){
+                view = '<img class="game-pic" src="./img/pic1.jpg">';
+            }
+            if(r==2){
+                view = '<img class="game-pic" src="./img/pic2.jpg">';
+            }            
+            if(r==3){
+                view = '<img class="game-pic" src="./img/pic3.jpeg">';
+            }
+            if(r==4){
+                view = '<img class="game-pic" src="./img/pic4.jpeg">';
+            }
+            if(r==5){
+                view = '<img class="game-pic" src="./img/pic5.jpeg">';
+            }
+            if(r==6){
+                view = '<img class="game-pic" src="./img/pic6.jpeg">';
+            }
+
+            console.log(view)
+            //表示
+            $("#echo").html(view);
+        });
+    </script>
+
+
+</body>
+</html>
